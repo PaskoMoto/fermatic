@@ -10,5 +10,6 @@ Requirements.
 .- Create a forder called 'fermatic' under /home/nemo/.
 .- You have to create a file called cellid.txt with a list of all the cellid's you want to trigger your action.
 .- You have to insert the value of your IMSI number in the appropriate place. (replace YOUR_IMSI_NUMBER_HERE string with your IMSI number)
+.- If you are planning to create a new .service file to start the service after reboots create a file called log.txt with permissions 666 and owner:group like nemo:nemo inside the folder /home/nemo/fermatic/
 
 With a few tweaks it should also be possible to activate an VPN connection when you are not at home & deactivate it when you are at home.
