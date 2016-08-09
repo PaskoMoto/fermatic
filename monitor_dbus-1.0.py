@@ -22,7 +22,7 @@ def handler(member=None,sender=None,path=None):
           pass
        else:
           LOG.write ("Tenemos que cambiar a indoors"+"\n")
-          os.system("dbus-send --system --print-reply --dest=net.connman /net/connman/service/cellular_214075543744791_context1 net.connman.Service.SetProperty string:AutoConnect variant:boolean:false")
+          os.system("dbus-send --system --print-reply --dest=net.connman /net/connman/service/cellular_YOUR_IMSI_NUMBER_HERE_context1 net.connman.Service.SetProperty string:AutoConnect variant:boolean:false")
           os.system("dbus-send --system --print-reply --dest=net.connman /net/connman/technology/wifi net.connman.Technology.SetProperty string:Powered variant:boolean:true")
 #          os.system("killall openvpn")
           HOMENETWORK = True 
@@ -32,7 +32,7 @@ def handler(member=None,sender=None,path=None):
        else:
           LOG.write ("Tenemos que cambiar a outdoors"+"\n")
 #          os.system("killall openvpn")
-          os.system("dbus-send --system --print-reply --dest=net.connman /net/connman/service/cellular_214075543744791_context1 net.connman.Service.SetProperty string:AutoConnect variant:boolean:true")
+          os.system("dbus-send --system --print-reply --dest=net.connman /net/connman/service/cellular_YOUR_IMSI_NUMBER_HERE_context1 net.connman.Service.SetProperty string:AutoConnect variant:boolean:true")
           os.system("dbus-send --system --print-reply --dest=net.connman /net/connman/technology/wifi net.connman.Technology.SetProperty string:Powered variant:boolean:false")
 #         os.system("/usr/sbin/openvpn --user nobody --group nobody --config /etc/openvpn/Jolla.conf --dev p2p5 --dev-type tap --verb 4")
           LOG.write("_***_"+datetime.datetime.fromtimestamp(int(time.time())).strftime('%Y-%m-%d,%H:%M:%S')+":"+str(sender)+"_***_\n")
