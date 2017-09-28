@@ -1,3 +1,4 @@
+# Fernando Pascual Sesma. Abril de 2016
 #!/usr/bin/python3
 from gi.repository import GLib
 import time
