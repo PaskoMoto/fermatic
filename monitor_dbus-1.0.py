@@ -7,7 +7,7 @@ import os
 import sys
 import dbus
 import dbus.glib
-OBJ_PATH = '/ril_1'
+OBJ_PATH = '/ril_0'
 INTERFACE = 'org.ofono.NetworkRegistration'
 SERVICE = 'org.ofono'
 LOG = open('/home/nemo/fermatic/log.txt','a')
